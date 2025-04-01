@@ -10,7 +10,9 @@ import Pricing from "@/components/blocks/pricing";
 import Showcase from "@/components/blocks/showcase";
 import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
+import { TranslatorBox } from "@/components/ui/TranslatorBox";
 import { getLandingPage } from "@/services/page";
+import { Toaster } from "sonner";
 
 export async function generateMetadata({
   params,
@@ -41,7 +43,18 @@ export default async function LandingPage({
 
   return (
     <>
+         <div className="w-full">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-2">Relapse Translator</h1>
+          <p className="text-xl text-muted-foreground">
+          Translate from Normal Language into Relapse
+          </p>
+        </div>
+        <TranslatorBox />
+        <Toaster richColors />
+      </div>
       {page.hero && <Hero hero={page.hero} />}
+
       {page.branding && <Branding section={page.branding} />}
       {page.introduce && <Feature1 section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
