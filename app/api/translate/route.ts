@@ -27,7 +27,7 @@ export async function POST(req: Request) {
             const openrouter = createOpenRouter({
               apiKey: process.env.OPENROUTER_API_KEY,
             });
-            const model = "anthropic/claude-3.5-haiku";
+            const model = process.env.OPENROUTER_MODEL || "anthropic/claude-3.5-haiku";
             textModel = openrouter(model);
          
             const prompt = `
