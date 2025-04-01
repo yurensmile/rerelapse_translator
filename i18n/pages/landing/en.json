@@ -264,21 +264,6 @@
               "target": "_self"
             }
           ]
-        },
-        {
-          "title": "Company",
-          "children": [
-            {
-              "title": "Contact",
-              "url": "/contact",
-              "target": "_self"
-            },
-            {
-              "title": "Privacy",
-              "url": "/privacy",
-              "target": "_self"
-            }
-          ]
         }
       ]
     },
